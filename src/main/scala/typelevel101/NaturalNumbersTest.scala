@@ -20,7 +20,6 @@ sealed trait NatN[Prev <: Nat] extends Nat {
 
 object NaturalNumbersTest {
   import typelevel101.Nat.+
-  import shapeless.test.illTyped
 
   type Nat1 = NatN[Nat0]
   type Nat2 = NatN[Nat1]
@@ -33,10 +32,11 @@ object NaturalNumbersTest {
   type Nat9 = NatN[Nat8]
 
   implicitly[Nat0 =:= Nat0]
-  illTyped("implicitly[Nat0 =:= Nat1]")
-
   implicitly[Nat0 + Nat1 =:= Nat1]
   implicitly[Nat1 + Nat1 =:= Nat2]
   implicitly[Nat2 + Nat1 =:= Nat3]
 
+  import shapeless.test.illTyped
+
+  illTyped("implicitly[Nat0 =:= Nat1]")
 }
