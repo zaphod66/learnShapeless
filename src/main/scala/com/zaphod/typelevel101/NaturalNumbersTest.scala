@@ -1,4 +1,4 @@
-package typelevel101
+package com.zaphod.typelevel101
 
 import scala.language.higherKinds
 
@@ -19,7 +19,7 @@ sealed trait NatN[Prev <: Nat] extends Nat {
 }
 
 object NaturalNumbersTest {
-  import typelevel101.Nat.+
+  import com.zaphod.typelevel101.Nat.+
 
   type Nat1 = NatN[Nat0]
   type Nat2 = NatN[Nat1]

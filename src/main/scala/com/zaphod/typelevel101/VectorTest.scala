@@ -1,8 +1,8 @@
-package typelevel101
+package com.zaphod.typelevel101
 
 import scala.language.higherKinds
 
-import typelevel101.Nat.+
+import com.zaphod.typelevel101.Nat.+
 
 sealed trait Vector {
   def ::(head: Int): Vector = NEVector(head, this)
@@ -50,7 +50,7 @@ case class TNEVector[TailSize <: Nat](head: Int, tail: TVector[TailSize]) extend
       case TNEVector(h, t) => TNEVector(head + h, tail + t) // pattern match is now exhaustive
     }
   }
-  def ++[ThatSize <: Nat](that: TVector[ThatSize]) = TNEVector(head, tail ++ that)  // arrghh
+  def ++[ThatSize <: Nat](that: TVector[ThatSize]) = TNEVector(head, tail ++ that)
 }
 
 object VectorTest extends App {

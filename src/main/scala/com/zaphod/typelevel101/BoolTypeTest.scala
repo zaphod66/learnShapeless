@@ -1,8 +1,8 @@
-package typelevel101
+package com.zaphod.typelevel101
 
 import scala.language.higherKinds
 
-import typelevel101.BoolType.\/
+import com.zaphod.typelevel101.BoolType.\/
 
 // vals
 
