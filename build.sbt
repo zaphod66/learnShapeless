@@ -18,3 +18,5 @@ libraryDependencies ++= Seq(
 
 scalacOptions += "-feature"
 
+initialCommands in console := "import shapeless._"
+initialCommands in console in Test := "import shapeless._"
