@@ -7,6 +7,8 @@ package com.zaphod.typeDerivation
 // https://www.youtube.com/watch?v=NL88I0DAS7g
 
 // import shapeless.{Generic, HList, HNil, Lazy}
+// https://github.com/milessabin/shapeless-type-class-derivation-2015-demo/blob/master/src/main/scala/derivation/derivation.scala
+
 import shapeless._
 
 object equalManual {
