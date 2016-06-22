@@ -80,7 +80,7 @@ object equalDerived {
     }
   }
 
-  // Induction over the products
+  // Induction over products
 
   // Base case for products
   implicit val eqHNil: Eq[HNil] = new Eq[HNil] {
@@ -92,7 +92,7 @@ object equalDerived {
     def eqv(x: H :: T, y: H :: T): Boolean = eqH.value.eqv(x.head, y.head) && eqT.value.eqv(x.tail, y.tail)
   }
 
-  // Induction over sums coproducts
+  // Induction over sums (coproducts)
 
   // Base case for sums
   implicit val eqCNil: Eq[CNil] = new Eq[CNil] {
